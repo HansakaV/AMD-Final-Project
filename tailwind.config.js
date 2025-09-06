@@ -5,5 +5,13 @@ module.exports = {
   theme: {
     extend: {}
   },
-  plugins: []
+  plugins: [],
+  darkMode: 'class', // This is the key change
+
+  corePlugins: {
+    preflight: false, // Disable Tailwind's base styles that might conflict
+  },
+
 }
+
+

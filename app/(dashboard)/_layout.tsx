@@ -5,7 +5,7 @@ import { MaterialIcons } from "@expo/vector-icons"
 
 const tabs = [
   { label: "Home", name: "home", icon: "home-filled" },
-  { label: "Add", name: "Add", icon: "place" },
+  { label: "Places+", name: "places", icon: "place" },
   { label: "Profile", name: "profile", icon: "person" },
   { label: "Settings", name: "settings", icon: "settings" }
 ] as const
@@ -22,7 +22,6 @@ const DashboardLayout = () => {
         }
       }}
     >
-      {/* (obj.name) ===  ({name}) */}
       {tabs.map(({ name, icon, label }) => (
         <Tabs.Screen
           key={name}
@@ -38,7 +37,5 @@ const DashboardLayout = () => {
     </Tabs>
   )
 }
-
-
 
 export default DashboardLayout

@@ -5,7 +5,6 @@ import {
   TextInput,
   TouchableOpacity,
   Pressable,
-  Alert,
   ActivityIndicator,
   KeyboardAvoidingView,
   Platform,
@@ -13,6 +12,7 @@ import {
 } from "react-native";
 import { useRouter } from "expo-router";
 import { register } from "@/services/authService";
+import Toast from "react-native-toast-message";
 
 const Register = () => {
   const router = useRouter();
@@ -24,7 +24,11 @@ const Register = () => {
     if (isLoading) return;
 
     if (!email || !password) {
-      Alert.alert("Validation Error", "Please enter email and password.");
+      Toast.show({
+        type: "error",
+        text1: "Validation Error",
+        text2: "Please enter email and password.",
+      });
       return;
     }
 
@@ -32,11 +36,21 @@ const Register = () => {
     try {
       const res = await register(email, password);
       console.log("Registration Success:", res);
-      Alert.alert("Success", "Registration completed successfully!");
-      router.back(); // Navigate back to login
-    } catch (err) {
-      console.error(err);
-      Alert.alert("Registration Failed", "Something went wrong. Please try again.");
+
+      Toast.show({
+        type: "success",
+        text1: "Registration Successful 🎉",
+        text2: "You can now log in.",
+      });
+
+      router.replace("/login");
+    } catch (err: any) {
+      console.error("Registration error:", err);
+      Toast.show({
+        type: "error",
+        text1: "Registration Failed ❌",
+        text2: err?.message || "An error occurred.",
+      });
     } finally {
       setIsLoading(false);
     }
@@ -84,7 +98,7 @@ const Register = () => {
             )}
           </TouchableOpacity>
 
-          <Pressable onPress={() => router.back()} className="mt-4">
+          <Pressable onPress={() => router.replace("/login")} className="mt-4">
             <Text className="text-center text-blue-500 text-lg">
               Already have an account? Login
             </Text>
