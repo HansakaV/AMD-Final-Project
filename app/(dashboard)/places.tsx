@@ -124,30 +124,20 @@ const Places = () => {
     }
   };
 
-  const handleDeletePlace = (id: string, title: string) => {
-    Alert.alert(
-      'Delete Place',
-      `Are you sure you want to delete "${title}"?`,
-      [
-        { text: 'Cancel', style: 'cancel' },
-        { 
-          text: 'Delete', 
-          style: 'destructive',
-          onPress: async () => {
-            try {
-              await deletePlace(id);
-              await fetchPlaces();
-              Alert.alert('Success', 'Place deleted successfully!');
-            } catch (error) {
-              console.error('Error deleting place:', error);
-              Alert.alert('Error', 'Failed to delete place. Please try again.');
-            }
-          }
-        },
-      ]
-    );
-  };
+  const handleDeletePlace = async (id: string) => {
+  try {
+    await deletePlace(id);
+    await fetchPlaces();
+    // Optional: Show a success message (Toast or Alert)
+    console.log('Place deleted successfully!');
+  } catch (error) {
+    console.error('Error deleting place:', error);
+    // Optional: Show an error message
+  }
+};
 
+
+ 
   const openUpdateModal = (place: Task) => {
     setSelectedPlace(place);
     setUpdateTitle(place.title);
@@ -242,7 +232,7 @@ const Places = () => {
                     
                     <TouchableOpacity
                       style={styles.deleteButton}
-                      onPress={() => handleDeletePlace(place.id, place.title)}
+                      onPress={() => handleDeletePlace(place.id)}
                     >
                       <Text style={styles.deleteButtonText}>🗑️ Delete</Text>
                     </TouchableOpacity>
