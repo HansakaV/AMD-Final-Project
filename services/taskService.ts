@@ -24,12 +24,14 @@ export const getAllPlace = async (): Promise<Task[]> => {
 
 // UPDATE
 export const updatePlace = async (id: string, task: Partial<Task>) => {
+  console.log("Updating place with id:", id, "and data:", task)
   const docRef = doc(db, "tasks", id)
   await updateDoc(docRef, task)
 }
 
 // DELETE
 export const deletePlace = async (id: string) => {
+  console.log("Deleting place with id:", id)
   const docRef = doc(db, "tasks", id)
   await deleteDoc(docRef)
 }
