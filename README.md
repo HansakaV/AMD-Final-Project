@@ -45,3 +45,7 @@ Clone the repository and install dependencies:
 git clone <your-repo-url>
 cd sri-lanka-secrets
 npm install
+
+```
+Enjoy SriLanka Secrets ❤️🪄
+
