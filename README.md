@@ -1,50 +1,47 @@
-# Welcome to your Expo app 👋
+# 🌴 Sri Lanka Secrets
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+[🎥 Watch Demo on YouTube](https://youtu.be/7SB6is95c9Q?si=40ZVt4hQROplUsDu)  
 
-## Get started
+📦 **Download APK:**  
+You can download the Android build from:  
+`/Build/sriLanka-secrets.apk`
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 📖 About the Project
 
-2. Start the app
+**Sri Lanka Secrets** is a cross-platform mobile app built with [Expo](https://expo.dev).  
+It showcases hidden gems, cultural highlights, and travel experiences in Sri Lanka.  
 
-   ```bash
-   npx expo start
-   ```
+This project was created using [`create-expo-app`](https://www.npmjs.com/package/create-expo-app) and follows **file-based routing**.
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## ✨ Features
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- 📱 Cross-platform app (Android, iOS, Web)  
+- 🗺️ Explore hidden places in Sri Lanka  
+- 📷 Media previews & descriptions  
+- 🚀 Easy setup with Expo  
+- 🔄 Fast refresh for development  
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## 🚀 Getting Started
+
+Follow these steps to run the project locally:
+
+### 1️⃣ Prerequisites
+
+- [Node.js](https://nodejs.org/) (LTS recommended)  
+- [Expo CLI](https://docs.expo.dev/get-started/installation/)  
+- A code editor like [VS Code](https://code.visualstudio.com/)  
+
+### 2️⃣ Installation
+
+Clone the repository and install dependencies:
 
 ```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+git clone <your-repo-url>
+cd sri-lanka-secrets
+npm install
